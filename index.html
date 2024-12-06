@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shoping</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-yellow-100">
+    <!-- Navigation Menu -->
+    <nav class="bg-yellow-500 p-4">
+      <ul class="flex justify-between items-center text-white">
+        <li>shoopping</li>
+        <li>
+          <a href="#home" class="px-4 py-2 hover:bg-yellow-600 rounded">Нүүр</a>
+        </li>
+        <li>
+          <a href="#add-product" class="px-4 py-2 hover:bg-yellow-600 rounded"
+            >нэмэх</a
+          >
+        </li>
+        <li>
+          <a href="#cart" class="px-4 py-2 hover:bg-yellow-600 rounded">Сагс</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home" class="hidden">
+      <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-gray-800">Бүтээгдэхүүн</h1>
+        <div
+          id="product-list"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4"
+        >
+          <!-- Products will be displayed here -->
+        </div>
+      </div>
+    </section>
+
+    <section id="add-product" class="hidden">
+      <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">
+          нэмэх
+        </h1>
+        <form
+          id="product-form"
+          class="bg-white p-6 rounded-lg shadow-md w-full max-w-lg"
+        >
+          <input
+            type="text"
+            id="title"
+            placeholder="Гарчиг"
+            class="w-full p-3 mb-4 border border-gray-300 rounded"
+          />
+          <textarea
+            id="introduction"
+            placeholder="Товч тайлбар"
+            class="w-full p-3 mb-4 border border-gray-300 rounded"
+          ></textarea>
+          <input
+            type="number"
+            id="price"
+            placeholder="Үнэ"
+            class="w-full p-3 mb-4 border border-gray-300 rounded"
+          />
+          <input
+            type="url"
+            id="image"
+            placeholder="Зурагны URL"
+            class="w-900px p-3 mb-4 border border-gray-300 rounded"
+          />
+          <button
+            type="submit"
+            class="w-900px py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600"
+          >
+            хадгалах
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section id="cart" class="hidden">
+      <!-- Cart items will be displayed here -->
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
